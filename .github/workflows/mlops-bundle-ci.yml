@@ -84,6 +84,7 @@ jobs:
         run:
           databricks configure --profile "db-azure-profile" --host ${{env.DATABRICKS_HOST}} --token ${{env.DATABRICKS_TOKEN}}
       ####
+      # Comment
       - name: Validate Bundle For Prod
         id: validate
         # env:

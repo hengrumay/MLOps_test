@@ -78,6 +78,12 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
       - uses: databricks/setup-cli@main
+      #### update
+      - name: Create profile
+        id: create_profile
+        run:
+          databricks configure --profile "db-azure-profile" --host ${{env.DATABRICKS_HOST}} --token ${{env.DATABRICKS_TOKEN}}
+      ####
       - name: Validate Bundle For Prod
         id: validate
         # env:

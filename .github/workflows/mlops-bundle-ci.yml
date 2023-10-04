@@ -49,8 +49,8 @@ jobs:
         uses: actions/github-script@v6
         id: comment
         with:
-          #github-token: ${{ secrets.GITHUB_TOKEN }} ##
-          github-token: ${{ secrets.GH_TOKEN }} ##
+          #github-token: ${{ secrets.GITHUB_TOKEN }} ## update in github --developer classic tokens add to ACTIONS secrets 
+          github-token: ${{ secrets.GH_TOKEN }}
           script: |
             const fs = require('fs');
             const fileContents = fs.readFileSync('validate_output.txt', 'utf8');
@@ -97,7 +97,7 @@ jobs:
         uses: actions/github-script@v6
         id: comment
         with:
-          #github-token: ${{ secrets.GITHUB_TOKEN }} ## add 
+          #github-token: ${{ secrets.GITHUB_TOKEN }} ## update in github --developer classic tokens add to ACTIONS secrets 
           github-token: ${{ secrets.GH_TOKEN }}
           script: |
             const fs = require('fs');

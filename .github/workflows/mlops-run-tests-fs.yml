@@ -11,8 +11,8 @@ env:
   # ARM_TENANT_ID: ${{ secrets.STAGING_AZURE_SP_TENANT_ID }}
   # ARM_CLIENT_ID: ${{ secrets.STAGING_AZURE_SP_APPLICATION_ID }}
   # ARM_CLIENT_SECRET: ${{ secrets.STAGING_AZURE_SP_CLIENT_SECRET }}
-  DATABRICKS_HOST: https://adb-8590162618558854.14.azuredatabricks.net ## to update 
-  DATABRICKS_TOKEN : ${{ secrets.DB_TOKEN }} ## add from github 
+  DATABRICKS_HOST: ${{ secrets.DB_HOST }} ## to update/add from github ACTIONS secrets 
+  DATABRICKS_TOKEN : ${{ secrets.DB_TOKEN }} ## add from github ACTIONS secrets  
 
 concurrency: mlops-feature-training-integration-test-staging
 
